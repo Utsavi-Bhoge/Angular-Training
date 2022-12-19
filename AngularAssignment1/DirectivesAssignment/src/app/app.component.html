@@ -1,0 +1,10 @@
+<button type="button"  (click)="OnClick()">Display Details</button>
+
+<p *ngIf="isDirective" >{{StringName}}</p>
+<p   *ngFor="let i of logArray"  [ngStyle]="{backgroundColor: getColor(i) }" [ngClass]="{'textColor':i>=5}">
+    {{i}}
+</p>
+
+
+
+

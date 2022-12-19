@@ -1,0 +1,6 @@
+
+<label for="btn1">Username</label> 
+<input id="btn1" [(ngModel)]="name1" #ctrl="ngModel" >
+<p>{{ name1 }}</p>
+
+<button type="button" class="btn btn-success"  (click)="CheckString()" [disabled]='!isDisable'>Reset User</button>
