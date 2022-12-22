@@ -1,0 +1,84 @@
+<body>
+  <div>
+    
+  
+  
+    <h1 style="text-align:center">{{title| uppercase}}</h1>
+<form #login = "ngForm" (ngSubmit)="submit(login.value)">
+
+  <div class="form-group">
+
+    <label for="projectname"><b>Project Name: </b></label>
+  
+    <input type="projectname" name="projectname" id="projectname" #projectname="ngModel" projectname placeholder="Enter Project name" ngModel required>
+  
+    <br><span *ngIf="projectname.invalid && projectname.touched" style="color: red;">Please enter a valid Project name</span>
+  
+    </div>
+  
+  
+  
+    <div class="form-group">
+  
+    <label for="projectstatus"><b> Subscriptions: </b></label>
+  
+    <select name="projectstatus" id="projectstatus" [ngModel]="projectstatus" required>
+  
+      <option selected="selected" value="STABLE"> STABLE </option>
+  
+      <option value="CRITICAL"> CRITICAL</option>
+  
+      <option value="FINISHED"> FINISHED </option>
+  
+    </select>
+  
+    </div>
+  
+   
+  
+    <div class="form-group">
+  
+    <label for="email"><b> Email: </b></label>
+  
+    <input type="email" #email="ngModel" name="email" placeholder="Enter Email" ngModel required>
+  
+    <br><span *ngIf="email.invalid && email.touched" style="color: red;">Please enter a valid Email</span><br>
+  
+    </div>
+  
+  
+  
+    <button class="btn btn-primary" type="submit">Submit</button>
+  
+  </form>
+  
+  
+<!--   
+  <table class='table table-striped' >
+    <thead>
+      <tr>
+        <th>Email Address</th>
+        <th>Subscriptions</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of array1">
+        <td>{{ item.email }}</td>
+        <td>{{ item.subscriptions }}</td>
+        <td>{{ item.password }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+   -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
