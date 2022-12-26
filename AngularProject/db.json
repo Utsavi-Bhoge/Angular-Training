@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Utsavi Bhoge",
+      "mob": "12345",
+      "addr": "ujjain"
+    },
+    {
+      "id": 2,
+      "name": "harsha kaithal",
+      "mob": "56789",
+      "addr": "bhopal"
+    },
+    {
+      "id": 3,
+      "name": "Nikita Thakur",
+      "mob": "876543219",
+      "addr": "Vidisha"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

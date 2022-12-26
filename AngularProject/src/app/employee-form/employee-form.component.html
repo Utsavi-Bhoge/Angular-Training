@@ -1,0 +1,68 @@
+  <div style="background-color:azure">
+  <table class="outer-table">
+    <tr>
+      <th>
+<table class="table table-bordered" >
+<thead  class="p-3 mb-2 bg-secondary text-white">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Mobile Number</th>
+        <th>Address</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let employee of allemployee" style="background-color:lavenderblush">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.mob}}</td>
+        <td>{{employee.addr}}</td>
+        <td>
+            <input type="button" value="Edit" (click)="EditEmployee(employee)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success me-2"/>
+        </td>
+        <td>
+          <input type="button" value="Delete" (click)="DeleteEmployee(employee)" class="btn btn-danger"/>
+
+        </td>
+    </tr>
+</tbody>
+</table>
+</th>
+
+    <th>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" class="p-3 mb-2 bg-secondary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Employee Form</h5>
+        </div>
+        <div class="modal-body"  >
+            <form class="row g-3" [formGroup]="formValue">
+                <div class="col-md-6">
+                    <label for="inputName" class="form-label">Employee Name</label>
+                    <input type="text" formControlName="name" class="form-control" id="inputName">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputClass" class="form-label">Mobile Number</label>
+                    <input type="text" formControlName="mob" class="form-control" id="inputClass">
+                  </div>
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Address</label>
+                  <input type="email" formControlName="addr" class="form-control" id="inputEmail4">
+                </div>
+               
+              </form>
+        </div>
+        <div class="modal-footer" >
+          <button *ngIf="btnSaveShow" type="button" class="btn btn-primary" (click)="AddEmployee()" >Register</button>
+        
+          <button type="button" class="btn btn-warning"  data-bs-dismiss="modal" (click)="ClearEmployee()" >Reset</button>
+          <button *ngIf="btnUpdateShow" type="button" class="btn btn-primary" (click)="UpdateEmployee()" >Update</button>
+        </div>
+      </div>
+    </div>
+  </th>
+</tr>
+</table>
+</div>
