@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "utsavi",
+      "mob": "12345",
+      "addr": "ujjain"
+    },
+    {
+      "id": 2,
+      "name": "harsha kaithal",
+      "mob": "56789",
+      "addr": "bhopal"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
