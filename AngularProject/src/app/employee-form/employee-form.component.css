@@ -1,0 +1,13 @@
+.modal-dialog{
+ width: 70%;
+ float: right;  
+ /* margin-left: 100px;  */
+}
+.table table-striped{
+    width: 60%;
+    float: left;
+    border: 2px solid black;
+}
+.outer-table{
+    width: 100%;
+}
