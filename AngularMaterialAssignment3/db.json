@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "fullname": "Utsavi Bhoge",
+      "email": "utsavi.bhoge@gmail.com",
+      "password": "1234",
+      "gender": "2",
+      "dateofbirth": "2022-12-28T18:30:00.000Z",
+      "mobile": "8765432198",
+      "skills": "Angular Intermediate",
+      "id": 2
+    },
+    {
+      "fullname": "Yogeshwari Jhala",
+      "email": "yo@gmail.com",
+      "password": "1234",
+      "gender": "FEMALE",
+      "dateofbirth": "2022-12-29T18:30:00.000Z",
+      "mobile": "9876543212",
+      "skills": "Angular Advanced",
+      "id": 3
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "dateofbirth": "",
+      "mobile": "",
+      "skills": "",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

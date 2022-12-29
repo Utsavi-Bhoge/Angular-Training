@@ -1,0 +1,140 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form [formGroup]="formValue" style="margin-top: 900px; background-color:rgba(30, 178, 194, 0.445); text-align:center;">
+    <h1 style="text-align: center;color: white;">REGISTRATION FORM</h1>
+
+<div>
+    <mat-form-field appearance="fill" >
+        <div>
+        <mat-label style="color: darkred;" >FULL NAME </mat-label>
+    </div>
+        <input matInput placeholder="Placeholder" formControlName="fullname" >
+        <mat-error>
+        </mat-error>
+        <mat-icon class="material-icons" >person</mat-icon>
+    </mat-form-field>
+
+</div>
+
+<div>
+    <mat-form-field appearance="fill" >
+        <div>
+        <mat-label style="color: darkred;">EMAIL ID</mat-label>
+    </div>
+        <input  matInput placeholder="Placeholder" formControlName="email"  >
+        <mat-error>
+        </mat-error>
+        <mat-icon class="material-icons" >email</mat-icon>
+
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance="fill">
+        <div>
+        <mat-label style="color: darkred;">PASSWORD</mat-label>
+    </div>
+        <input matInput placeholder="Placeholder" formControlName="password" >
+        <mat-error>
+        </mat-error>
+        <mat-icon class="material-icons" >password</mat-icon>
+
+    </mat-form-field>
+</div>
+
+
+
+
+    <div>
+    <mat-label style="color: darkred;">Select Gender</mat-label>
+</div>
+<mat-radio-group aria-label="gender"  formControlName="gender">  
+    <mat-radio-button value="MALE" style="color: white;">MALE</mat-radio-button>  
+    <mat-icon class="material-icons" >male</mat-icon>
+    <mat-radio-button value="FEMALE" style="color: white;">FEMALE</mat-radio-button>  
+    <mat-icon class="material-icons" >female</mat-icon>
+    <mat-radio-button value="OTHER" style="color:  white;">OTHER</mat-radio-button>  
+    <mat-icon class="material-icons" >transgender</mat-icon>
+
+    <mat-error>
+    </mat-error>
+
+  </mat-radio-group>  
+  <div>
+  <mat-form-field appearance="fill">
+    <mat-label style="color: darkred;">Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="dateofbirth" >
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance="fill">
+        <div>
+        <mat-label style="color: darkred;">MOBILE NUMBER</mat-label>
+    </div>
+        <input matInput placeholder="Placeholder"  formControlName="mobile">
+        <mat-error>
+        </mat-error>
+        <mat-icon class="material-icons" >phone</mat-icon>
+
+    </mat-form-field>
+</div>
+
+
+
+<div>
+<mat-form-field appearance="fill">
+    <mat-label style="color: darkred;">Select your skills</mat-label>
+    <mat-select formControlName="skills" >
+      <mat-option value="Angular Basic"> Angular Basic</mat-option>
+      <mat-option value="Angular Intermediate" >Angular Intermediate</mat-option>
+      <mat-option value="Angular Advanced">Angular Advanced</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+
+<div>
+
+
+
+     <mat-chip-listbox aria-label="Hobbies">
+
+     
+
+       <mat-chip-option>Dance</mat-chip-option>
+
+     
+
+       <mat-chip-option>singing</mat-chip-option>
+
+
+
+       <mat-chip-option color="accent" selected>irritate</mat-chip-option>
+
+     
+
+       <mat-chip-option color="warn">snooker</mat-chip-option>
+
+     
+
+     </mat-chip-listbox>
+
+     
+</div>
+     
+
+
+<button mat-raised-button color="accent" (click)="OnSubmit()">Submit</button>
+
+</form>
