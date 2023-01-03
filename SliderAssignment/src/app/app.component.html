@@ -1,0 +1,54 @@
+<div style="background-color: rgba(137, 130, 172, 0.477);">
+<mat-card style="background-color: rgba(48, 58, 71, 0.265);">
+  <mat-card-content>
+    <h2 class="style1" style="text-align: center;">SLIDER</h2>
+
+    <section class="style2" >
+      <mat-form-field class="style3 style4" appearance="fill">
+        <mat-label>Value</mat-label>
+        <input matInput type="number" [(ngModel)]="value">
+      </mat-form-field>
+      <mat-form-field class="style3 style4" appearance="fill">
+        <mat-label>Min value</mat-label>
+        <input matInput type="number" [(ngModel)]="min">
+      </mat-form-field>
+      <mat-form-field class="style3 style4" appearance="fill">
+        <mat-label>Max value</mat-label>
+        <input matInput type="number" [(ngModel)]="max">
+      </mat-form-field>
+      <mat-form-field class="style3 style4" appearance="fill">
+        <mat-label>Step size</mat-label>
+        <input matInput type="number" [(ngModel)]="step">
+      </mat-form-field>
+    </section>
+
+      <mat-checkbox [(ngModel)]="showTicks">Show ticks</mat-checkbox>
+
+      <mat-checkbox [(ngModel)]="thumbLabel">Show thumb label</mat-checkbox>
+
+      <mat-checkbox [(ngModel)]="disabled">Disabled</mat-checkbox>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-result-card" style="text-align: center;">
+  <mat-card-content>
+    <h2>Result</h2>
+
+    <div  style="align-items: center;">
+      <label id="example-name-label" class="example-name-label" >Value: </label>
+      
+      <label class="example-value-label">{{value}}</label>
+    </div>
+    <mat-slider
+        class="example-margin"
+        [disabled]="disabled"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [discrete]="thumbLabel"
+        [showTickMarks]="showTicks">
+      <input matSliderThumb [(ngModel)]="value">
+    </mat-slider>
+  </mat-card-content>
+</mat-card>
+</div>
