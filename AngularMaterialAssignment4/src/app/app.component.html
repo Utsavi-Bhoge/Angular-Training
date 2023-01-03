@@ -1,0 +1,112 @@
+<div
+    style="background-image: url(https://static.vecteezy.com/system/resources/previews/004/941/847/non_2x/cosmetic-background-for-product-branding-and-packaging-presentation-geometry-form-circle-molding-on-podium-stage-with-shadow-of-leaf-background-design-eps10-vector.jpg);">
+    <mat-sidenav-container fullscreen>
+
+        <mat-sidenav #sidenav>
+
+            <mat-nav-list (click)="sidenav.close()">
+
+
+
+                <a mat-list-item>
+
+
+                    <span>Courses List</span>
+
+                </a>
+
+
+
+                <a mat-list-item>
+
+
+                    <span>Add New Course</span>
+
+                </a>
+
+                <a mat-list-item routerLink="stepper-component" routerLinkActive="active" ariaCurrentWhenActive="page">
+
+
+                    <span>Registeration Form</span>
+
+                </a>
+
+
+
+            </mat-nav-list>
+
+
+
+
+        </mat-sidenav>
+
+
+
+        <mat-toolbar color="primary">
+
+
+
+            <button mat-icon-button (click)="sidenav.open()">
+
+                <mat-icon>menu</mat-icon>
+
+            </button>
+
+
+
+            <a mat-button [matMenuTriggerFor]="dropdown">
+
+                About Us
+
+            </a>
+
+
+
+            <mat-menu #dropdown>
+
+
+
+                <button mat-menu-item (click)="openDialog()" >CEO Message</button>
+
+
+
+                <button mat-menu-item (click)="openDialog1()">Contact Details</button>
+
+
+
+            </mat-menu>
+
+
+
+            <a mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+
+                <mat-icon>home</mat-icon>
+
+                Home
+
+            </a>
+
+
+
+            <a mat-button routerLink="login-component" routerLinkActive="active" ariaCurrentWhenActive="page">
+
+                <mat-icon>account_circle</mat-icon>
+
+                Login
+
+            </a>
+
+            <a mat-button routerLink="form-component" routerLinkActive="active" ariaCurrentWhenActive="page">
+
+
+                Registration
+
+            </a>
+            <router-outlet></router-outlet>
+
+        </mat-toolbar>
+    
+        
+
+    </mat-sidenav-container> -->
+</div>
